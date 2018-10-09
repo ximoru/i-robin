@@ -89,6 +89,9 @@ var argv = require('minimist')(process.argv.slice(2), {
     gulp.src('./src/layuiadmin/layui/**/*')
     .pipe(gulp.dest(destDir + '/layuiadmin/layui'));
 
+    gulp.src('./src/robin/**/*')
+    .pipe(gulp.dest(destDir + '/robin'));
+
     return gulp.src('./src/views/**/*')
     .pipe(gulp.dest(destDir + '/views'));
   }
