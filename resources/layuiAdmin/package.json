@@ -1,12 +1,12 @@
 {
-  "name": "layuiAdmin.std",
+  "name": "robinAdmin.std",
   "version": "1.1.0",
-  "description": "通用后台管理模板系统",
+  "description": "RobinFin后台管理模板系统",
   "license": "LPPL",
   "author": [
-    "xianxin <xianxin@layui-inc.com>"
+    "robinfin <info@robinfinfx.com>"
   ],
-  "homepage": "http://www.layui.com/admin/",
+  "homepage": "http://www.robinfinfx.com",
   "devDependencies": {
     "chai": "^4.1.1",
     "del": "^2.2.2",
