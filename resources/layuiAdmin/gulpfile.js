@@ -29,7 +29,7 @@ var argv = require('minimist')(process.argv.slice(2), {
   ,{pkg: pkg, js: ';'}
 ]
 
-,destDir = './dist' //构建的目标目录
+,destDir = '../../public/admin' //构建的目标目录
 ,releaseDir = '../pack/layuiAdmin.pack/'+ pkg.name +'-v' + pkg.version //发行版本目录
 
 //任务
@@ -85,7 +85,10 @@ var argv = require('minimist')(process.argv.slice(2), {
     
     gulp.src('./src/layuiadmin/style/res/*')
     .pipe(gulp.dest(destDir + '/layuiadmin/style/res'));
-    
+
+    gulp.src('./src/layuiadmin/layui/**/*')
+    .pipe(gulp.dest(destDir + '/layuiadmin/layui'));
+
     return gulp.src('./src/views/**/*')
     .pipe(gulp.dest(destDir + '/views'));
   }
@@ -95,7 +98,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     return gulp.src('../../../../res/layui/rc/**/*')
     .pipe(gulp.dest('./dev-std/layuiadmin/layui'))
     .pipe(gulp.dest('./src/layuiadmin/layui'))
-    .pipe(gulp.dest('./dist/layuiadmin/layui'))
+    .pipe(gulp.dest(destDir + '/layuiadmin/layui'))
   }
 };
 
