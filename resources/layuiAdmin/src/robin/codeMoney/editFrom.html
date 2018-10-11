@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>layuiAdmin 工单管理 iframe 框</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+  <style>
+    .base{
+      padding: 9px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layui-form" lay-filter="layuiadmin-form-order" id="layuiadmin-form-order" style="padding: 20px 30px 0 0;">
+    <div class="layui-form-item">
+      <label class="layui-form-label">姓名:</label>
+      <div class="layui-input-inline">
+        <div class="base">张浩</div>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">账户余额:</label>
+      <div class="layui-input-inline">
+        <div class="base">2000</div>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">提现金额:</label>
+      <div class="layui-input-inline">
+        <div class="base">500</div>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">提现时间:</label>
+      <div class="layui-input-inline">
+        <div class="base">2018-10-11</div>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">状态:</label>
+      <div class="layui-input-inline">
+        <select name="state">
+          <option value="未分配">未审核</option>
+          <option value="处理中">未通过</option>
+          <option value="已处理">已审核</option>
+        </select>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">提现备注:</label>
+      <div class="layui-input-inline">
+        <textarea name="desc" placeholder="备注" class="layui-textarea">请尽快提现</textarea>
+      </div>
+    </div>
+    <div class="layui-form-item layui-hide">
+      <input type="button" lay-submit lay-filter="withdrawal-submit" id="withdrawal-submit" value="确认">
+    </div>
+  </div>
+
+  <script src="../../layuiadmin/layui/layui.js"></script>
+  <script>
+  layui.config({
+    base: '../../layuiadmin/' //静态资源所在路径
+  }).extend({
+    index: 'lib/index' //主入口模块
+  }).use(['index', 'form'], function(){
+    var $ = layui.$
+    ,form = layui.form;
+  })
+
+
+  </script>
+</body>
+</html>
